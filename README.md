@@ -44,18 +44,16 @@ If you have completed https://github.com/Emq17/Configuring-On-premises-Active-Di
 4. Touch on "CNAME" records (mapping one name to another name)
 5. Discuss Root Hints: If you're using our local DNS server to resolve names into IP addresses, why can we go to Google and all the rest of the sites on the internet? Does our local DNS saerver know about those?
 
-<h2>Actions and Observations</h2>
+<h2>A-Records</h2>
 
-<h3>A-Record Exercise</h3>
+A-Records are mappings from hostnames to IP Addresses
 
->A-Records are mappings from hostnames to IP Addresses
-
-- We'll take a look at DNS A-Records 
-- Log into DC-1 as **mydomain.com\jane_admin**
-- Log into Client-01 as **mydomain.com\jane_admin**
-- Open `Command Prompt` as administrator on Client-01
-- Type **ping mainframe**
-- Notice that it fails.
+- Using the same credentials from https://github.com/Emq17/Configuring-On-premises-Active-Directory-within-Azure-VMs, go ahead and use Microsoft Remote Desktop to log into DC-1 as your domain admin account (mydomain.com\jane_admin)
+- Connect and log into Client-1 as an admin (jane_admin)
+- From Client-1 try to ping "mainframe" and notice that it fails to do so
+- Nslookup "mainframe" notice that it also fails (no DNS record)
+- Create a DNS record on DC-1 for mainframe and have it point to DC-1's Private IP address
+- Go back to Client-1 and try to ping it. Observe how it should work now. 
 
 ![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/65164576-efd0-4be1-a458-b9ba3321061d)
 
