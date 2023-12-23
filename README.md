@@ -28,6 +28,18 @@ If you have completed https://github.com/Emq17/Configuring-On-premises-Active-Di
   - Client-01 and DC-1 Virtual Machines
   - MircoSoft Active Directory installed in DC-1
   - DC-1 promoted to a Domain Controller
+  
+
+![Screen Shot 2023-12-23 at 4 15 12 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/c269c7e1-0b49-4090-b4d2-d69d95d68b08)
+
+
+<h2>Overview (What We're Going To Do)</h2>
+
+1. Inspect DNS A-Records on the server (hostname to IP address mappings)
+2. Create some of our own A-Records on the server and observe them from the client
+3. Delete records from server and inspect/clear the client DNS cache to gain understanding
+4. Touch on "CNAME" records (mapping one name to another name)
+5. Discuss Root Hints: If you're using our local DNS server to resolve names into IP addresses, why can we go to Google and all the rest of the sites on the internet? Does our local DNS saerver know about those?
 
 <h2>Actions and Observations</h2>
 
