@@ -50,12 +50,28 @@ A-Records are mappings from hostnames to IP Addresses
 
 - Using the same credentials from https://github.com/Emq17/Configuring-On-premises-Active-Directory-within-Azure-VMs, go ahead and use Microsoft Remote Desktop to log into DC-1 as your domain admin account (mydomain.com\jane_admin)
 - Connect and log into Client-1 as an admin (jane_admin)
-- From Client-1 try to ping "mainframe" and notice that it fails to do so
+  - From Client-1 try to ping "mainframe" and notice that it fails to do so
+
+![Screen Shot 2023-12-23 at 6 50 44 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/4d0d0091-4919-4d58-bcd2-88dcaff0d970)
+
+- This currently represents what took place behind the scenes on why we are getting the error message in our Command Prompt
+  - It couldn't find a record in our cache, host file, or local DNS server
+
+![Screen Shot 2023-12-23 at 6 49 30 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/e40d2e73-6e1b-4caa-83fe-46ba36e4787f)
+
+- Switch over to DC-1 so we can get started on creating an A-Record for mainframe ("mainframe" is just a random name, we could have chosen "zebra" if we really wanted to)
+- Go into your Server Manager dashboard and click on "Tools" and then "DNS" from the drop down menu
+
+![Screen Shot 2023-12-23 at 6 55 51 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/efc6c164-f355-4e52-b0d7-00ff02091e61)
+
+
+
+
 - Nslookup "mainframe" notice that it also fails (no DNS record)
 - Create a DNS record on DC-1 for mainframe and have it point to DC-1's Private IP address
 - Go back to Client-1 and try to ping it. Observe how it should work now. 
 
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/65164576-efd0-4be1-a458-b9ba3321061d)
+
 
 
 - There is no DNS Record
