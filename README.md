@@ -3,32 +3,31 @@
 
 # Building-Intuition-For-DNS
 
-</p>
 
-In this tutorial, We'll simplify DNS (Domain Name System) and easily understand it. We'll explore DNS A-Records, Creating and Deleting Records, CNAME Records, and Root Hints.<br />
+In this Repo, I aim to show you and simplify the concept of DNS (Domain Name System) for an easier grasp of understanding it. We will cover topics such as DNS A-Records, the creation and deletion of records, CNAME Records, and Root Hints.
 
->**Note***
->_The following uses material created in the previous demonstration, ["On-premises Active Directory Deployed in the Cloud (Azure)"](https://github.com/CarlosAlvarado0718/Configure-AD)._
 
-<h2>Environments and Technologies Used</h2>
+<h2>Environments and Technologies</h2>
 
 - Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop Connection (RDP)
+- Microsoft Remote Desktop (Mac) (RDP)
 - Command Line
-- Microsoft Azure Directory
+- Microsoft Azure Active Directory (On-premises)
 - Domain Name System (DNS)
 
-<h2>Operating Systems Used </h2>
+<h2>Operating Systems</h2>
 
 - Windows 10 (21H2)
 
 <h2>List of Prerequisites</h2>
 
-- Client VM joined to your Domain
-- MicroSoft Azure w/ two pre-configured VM's
-- Client-01 and DC-1 Virtual Machines
-- MircoSoft Active Directory installed in DC-1
-- DC-1 promoted to a Domain Controller
+If you have completed https://github.com/Emq17/Configuring-On-premises-Active-Directory-within-Azure-VMs without closing out your session, you are good to go.
+- If starting from scratch:
+  - Client VM joined to your Domain
+  - MicroSoft Azure w/ two pre-configured VM's
+  - Client-01 and DC-1 Virtual Machines
+  - MircoSoft Active Directory installed in DC-1
+  - DC-1 promoted to a Domain Controller
 
 <h2>Actions and Observations</h2>
 
