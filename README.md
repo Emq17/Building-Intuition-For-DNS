@@ -1,4 +1,7 @@
-<p align="center">
+<div style="text-align: center;">
+  <img src="https://i.imgur.com/rwHsNiO.png" alt="Screenshot" width="320" />
+</div>
+
 
 ![1_oSsQf_VmxRU-ApnVhz9-tQ](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/5b1002fe-9ef1-480b-aca2-87ec620e8638)
 
