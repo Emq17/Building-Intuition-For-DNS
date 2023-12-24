@@ -1,7 +1,5 @@
-<p align="center"> 
-
-![Screen Shot 2023-12-24 at 3 40 18 AM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/b6296a2e-3d4c-4308-9f59-e73c973af6c3)
-
+<p align="center">
+<img src="https://i.imgur.com/mPv2AIQ.png" alt="Logo"/>
 </p>
 
 # Building Intuition For DNS
