@@ -40,9 +40,15 @@ If you have completed https://github.com/Emq17/Configuring-On-premises-Active-Di
 
 1. Inspect DNS A-Records on the server (hostname to IP address mappings)
 2. Create some of our own A-Records on the server and observe them from the client
-3. Delete records from server and inspect/clear the client DNS cache to gain understanding
+3. Update records from server and inspect/clear the client DNS cache to gain understanding
 4. Touch on "CNAME" records (mapping one name to another name)
-5. Discuss Root Hints: If you're using our local DNS server to resolve names into IP addresses, why can we go to Google and all the rest of the sites on the internet? Does our local DNS saerver know about those?
+5. Discuss Root Hints: If you're using our local DNS server to resolve names into IP addresses, why can we go to Google and all the rest of the sites on the internet? Does our local DNS server know about those?
+
+<h2>Understanding DNS</h2>
+
+- DNS converts computer names (such as client-1.mydomain.com or www.google.com) to IP addresses which can be used by the computer to locate resources
+- DNS is integrated with Active Directory and automatically got installed on DC-1 in the lab prior to this (https://github.com/Emq17/Configuring-On-premises-Active-Directory-within-Azure-VMs)
+- In this lab, we will use Client-1 and DC-1 to do a few exercises for the sake of understanding DNS a bit better
 
 <h2>A-Records</h2>
 
@@ -162,12 +168,14 @@ Canonical Name; A DNS CNAME record provides an alias for another domain.
 
 <h2>Root Hints</h2>
 
-The authoritative name servers that serve the DNS root zone, commonly known as the "root servers", are a network of hundreds of servers in many countries around the world. They are configured in the DNS root zone as 13 named authorities.
+The authoritative name servers that serve the DNS root zone, commonly known as the "root servers", are a network of hundreds of servers in many countries around the world. They are configured in the DNS root zone as 13 named authorities; Root hints resolve queries for zones that do not exist on the local DNS server. They are only used if forwarders are not configured or fail to respond.
 
-![Screen Shot 2023-12-23 at 10 50 40 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/50a37d56-ee14-409a-a932-0276089ce212)
+- By going to DC-1's DNS manager, right clicking "DC-1", choosing "Properties", and opening up the "Root Hints" tab, you can see all the servers 
 
+![Screen Shot 2023-12-23 at 11 25 45 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/f9f156e4-c07e-42e5-aa75-93d865e2e405)
 
+To summarize, root hints are a set of IP addresses pointing to the root DNS servers, and they help DNS resolvers initiate the process of resolving domain names by providing the initial information needed to navigate the hierarchical structure of the DNS. Once the resolver has the information from the root hints, it can proceed with queries to the appropriate authoritative DNS servers to ultimately resolve the requested domain name.
 
+<h1>Congratulations on finishing another walkthrough with me</h1>
 
-<h1>ALL DONE!!! CONGRATS!!!</h1>
-<h3>Now you have a better understanding of DNS, A-Records, DNS caching and CNAME Records. </h3>
+I hope these step-by-step visuals made the topics we've discussed above clear enough for you to get a good handle on how DNS overall works
