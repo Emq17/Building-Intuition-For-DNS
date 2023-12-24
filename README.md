@@ -69,50 +69,53 @@ A-Records are mappings from Host Names to IP Addresses
   - Reverse Lookup Zone: IP Address to Host Name mapping
 - Expand "Forward Lookup Zone" and click on "mydomain.com"
   - You should now see the list of A-Records that we have right now
-- Remember that an A-Records just means Host Name to IP address mapping
+- Remember that an A-Record just means host name to IP address mapping
   - So you can see Client-1 as a Host Name and it maps to 10.0.0.5 while dc-1 is another Host Name that maps to 10.0.0.4 
-
+- These automatically got registered over the network when Client-1 went online. DNS is integrated within Active Directory
 
 ![Screen Shot 2023-12-23 at 7 02 13 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/47eb1b24-0c1c-485d-8d06-862d946d0f1c)
 
+- Manaully create another A-Record for the host name "mainframe"
+  - Right click and click on "New Host (A or AAAA)..."
+
+![Screen Shot 2023-12-23 at 7 10 58 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/72d4ee7a-92f5-4cfa-b6b5-6ed9afd30bb5)
+
+- Fill out the name and go ahead and choose dc-1's IP address then click "Add Host"
+    - Essentially what we are doing right now is arbitrary. We are just randomly creating an A-Record so we can observe what happens on Client-1 when we do this
+      
+![Screen Shot 2023-12-23 at 7 12 55 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/4838dde8-f267-4d21-957b-b6077033ccba)
+
+- As you can see we have successfully created an A-Record for mainframe
+  - Now we can go back to Client-1 and try to ping mainframe again
+
+![Screen Shot 2023-12-23 at 7 19 16 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/5fa2d75d-3757-4b03-8e8c-858b7ed490a8)
+
+- You can see here that the ping succeeds this time
+
+![Screen Shot 2023-12-23 at 7 20 40 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/062e2b83-26a2-41a6-ac79-bb1196546b83)
+
+- Type in "nslookup mainframe" on your command line
+  - Observe how the dc-1 server with the 10.0.0.4 IP address was able to return the record "mainframe.mydomain.com"
+
+![Screen Shot 2023-12-23 at 7 29 33 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/e3ec9afd-02d3-4581-a1c5-dc64fb42da94)
 
 
 
-- Nslookup "mainframe" notice that it also fails (no DNS record)
-- Create a DNS record on DC-1 for mainframe and have it point to DC-1's Private IP address
-- Go back to Client-1 and try to ping it. Observe how it should work now. 
 
 
 
 
-- There is no DNS Record
-- Open `Tools` on DC-1 
-- Click `DNS`
 
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/4f7ba249-77b6-49d0-90fb-e32f8bb8be3f)
 
-- This will open `DNS Manager`
-- Expand `DC-1`
-- Expand `Forward Lookup Zones`
-- Expand `mydomain.com`
-- Right Click
-- Select `New Host (A or AAAA)...`
 
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/702f70db-edaf-4847-b97a-8fca34dbd13c)
 
-- Create A-Record named **mainframe**
-- Set `IP Address` to **10.0.0.4**
-- Click `Add Host`
 
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/752e56ee-8268-42fc-86f8-93266766fbfd)
 
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/1e3ef3dd-fd4c-4089-ba37-8ac5e0472b3d)
 
-- Open Client-01 Virtual Machine
-- Type **ping mainframe**
-- Now you see that it works
 
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/2cca91be-5694-42df-8a60-d046dc5ad15c)
+
+
+
 
 <h3>Local DNS Cache Exercise</h3>
 
