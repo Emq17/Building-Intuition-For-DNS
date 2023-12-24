@@ -26,7 +26,8 @@ In this repository, my goal is to demonstrate and simplify the concept of DNS (D
 
 <h2>Operating Systems</h2>
 
-- Windows 10 (21H2)
+- Windows Server 2022
+- Windows 10 (22H2)
 
 <h2>List of Prerequisites</h2>
 
