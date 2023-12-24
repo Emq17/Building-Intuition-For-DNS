@@ -97,7 +97,8 @@ A-Records are mappings from Host Names to IP Addresses
 - Type in "nslookup mainframe" on your command line
   - Observe how the dc-1 server with the 10.0.0.4 IP address was able to return the record "mainframe.mydomain.com"
 
-![Screen Shot 2023-12-23 at 7 29 33 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/e3ec9afd-02d3-4581-a1c5-dc64fb42da94)
+![Screen Shot 2023-12-23 at 7 34 02 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/5e684c6b-cff8-4c3d-8ff5-a65963eb4fa4)
+
 
 
 
