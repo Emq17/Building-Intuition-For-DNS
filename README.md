@@ -47,7 +47,7 @@ If you have completed https://github.com/Emq17/Configuring-On-premises-Active-Di
 <h2>Understanding DNS</h2>
 
 - DNS converts computer names (such as client-1.mydomain.com or www.google.com) to IP addresses which can be used by the computer to locate resources
-- DNS is integrated with Active Directory and automatically got installed on DC-1 in the lab prior to this (https://github.com/Emq17/Configuring-On-premises-Active-Directory-within-Azure-VMs)
+- DNS is integrated with Active Directory and got automatically installed on DC-1 in my guide prior to this (https://github.com/Emq17/Configuring-On-premises-Active-Directory-within-Azure-VMs)
 - In this lab, we will use Client-1 and DC-1 to do a few exercises for the sake of understanding DNS a bit better
 
 <h2>A-Records</h2>
