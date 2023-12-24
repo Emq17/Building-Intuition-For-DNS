@@ -21,7 +21,6 @@ In this repository, my goal is to demonstrate and simplify the concept of DNS (D
 
 - Microsoft Azure (Virtual Machines/Compute)
 - Microsoft Remote Desktop (Mac) (RDP)
-- Command Line
 - Microsoft Azure Active Directory (On-premises)
 - Domain Name System (DNS)
 
