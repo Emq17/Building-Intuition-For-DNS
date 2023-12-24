@@ -4,7 +4,7 @@
 
 </p>
 
-# Building-Intuition-For-DNS
+# Building Intuition For DNS
 
 
 In this repository, my goal is to demonstrate and simplify the concept of DNS (Domain Name System) for a more accessible understanding. We'll explore areas like A-Records, the creation and updating of records, CNAME, and Root Hints.
