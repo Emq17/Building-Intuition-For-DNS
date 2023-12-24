@@ -96,6 +96,13 @@ A-Records are mappings from Host Names to IP Addresses
 
 ![Screen Shot 2023-12-23 at 7 34 02 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/5e684c6b-cff8-4c3d-8ff5-a65963eb4fa4)
 
+<h2>Local DNS Cache</h2>
+
+- To demonstrate the DNS cache on Client-1, type in "ipconfig /displaydns" into the Command Prompt
+  - This should show the records it has already gone to. When it resolved it once already, the record is stored in the cache
+  - So for the next time we ping "mainframe", instead of bothering the DNS server, it's just going to use the local cache to look through the names Client-1 has figured out already because that is much faster
+ 
+![Screen Shot 2023-12-23 at 8 10 01 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/faf35847-6828-4932-bdcb-a692b263f8d4)
 
 
 
@@ -112,10 +119,6 @@ A-Records are mappings from Host Names to IP Addresses
 
 
 
-
-
-
-<h3>Local DNS Cache Exercise</h3>
 
 - Open DC-1
 - Right Click `mainframe`
