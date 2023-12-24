@@ -1,6 +1,6 @@
 <p align="center"> 
-  
-![1_oSsQf_VmxRU-ApnVhz9-tQ](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/5b1002fe-9ef1-480b-aca2-87ec620e8638)
+
+![Screen Shot 2023-12-24 at 3 39 18 AM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/599a3a9c-8bb8-436a-993d-f4ceb654ddc3)
 
 </p>
 
