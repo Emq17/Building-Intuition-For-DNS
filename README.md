@@ -1,6 +1,6 @@
 <p align="center"> 
 
-![Screen Shot 2023-12-24 at 3 39 18 AM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/599a3a9c-8bb8-436a-993d-f4ceb654ddc3)
+![Screen Shot 2023-12-24 at 3 40 18 AM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/b6296a2e-3d4c-4308-9f59-e73c973af6c3)
 
 </p>
 
