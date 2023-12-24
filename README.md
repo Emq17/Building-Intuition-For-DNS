@@ -75,7 +75,7 @@ A-Records are mappings from Host Names to IP Addresses
 
 ![Screen Shot 2023-12-23 at 7 02 13 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/47eb1b24-0c1c-485d-8d06-862d946d0f1c)
 
-- Manaully create another A-Record for the host name "mainframe"
+- Manually create another A-Record for the host name "mainframe"
   - Right click and click on "New Host (A or AAAA)..."
 
 ![Screen Shot 2023-12-23 at 7 10 58 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/72d4ee7a-92f5-4cfa-b6b5-6ed9afd30bb5)
@@ -103,6 +103,26 @@ A-Records are mappings from Host Names to IP Addresses
   - So for the next time we ping "mainframe", instead of bothering the DNS server, it's just going to use the local cache to look through the names Client-1 has figured out already because that is much faster
  
 ![Screen Shot 2023-12-23 at 8 10 01 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/faf35847-6828-4932-bdcb-a692b263f8d4)
+
+- Now go back to DC-1's remote connection and change mainframe's record address to 8.8.8.8
+  - Double click on the "mainframe" A-Record that we made
+  - Update the ID address to "8.8.8.8" then hit "Apply" and "OK"
+
+![Screen Shot 2023-12-23 at 9 02 24 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/3fc0279e-0efc-426b-bf4c-2e3d944b966a)
+  
+- Go back to Client-1 and ping mainframe again. Observe that it pings the new address
+- Also observe the local dns cache (ipconfig /displaydns)
+
+![Screen Shot 2023-12-23 at 9 25 21 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/ef851aa3-f305-4d1b-9cd0-d328654282b5)
+
+- By any chance, if this IP address did not manage to update, many problems could occur
+  - Sometimes a network's IP address might change but your local computer still has the old IP address cached which can cause you not to reach certain resources  
+- Flush the DNS cache using "ipconfig /flushdns" as a local admin
+  - Search up "Command Prompt", right click it, choose "Run as administrator", then run the command
+- After you flush it you will see that the cache is now empty and that the updated IP address should now be in effect if you ping it once again
+
+![Screen Shot 2023-12-23 at 10 19 36 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/ec0362cd-d030-4994-a575-bfb393724f57)
+
 
 
 
