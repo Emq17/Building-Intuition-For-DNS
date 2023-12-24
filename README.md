@@ -46,7 +46,7 @@ If you have completed https://github.com/Emq17/Configuring-On-premises-Active-Di
 
 <h2>A-Records</h2>
 
-A-Records are mappings from hostnames to IP Addresses
+A-Records are mappings from Host Names to IP Addresses
 
 - Using the same credentials from https://github.com/Emq17/Configuring-On-premises-Active-Directory-within-Azure-VMs, go ahead and use Microsoft Remote Desktop to log into DC-1 as your domain admin account (mydomain.com\jane_admin)
 - Connect and log into Client-1 as an admin (jane_admin)
@@ -63,6 +63,17 @@ A-Records are mappings from hostnames to IP Addresses
 - Go into your Server Manager dashboard and click on "Tools" and then "DNS" from the drop down menu
 
 ![Screen Shot 2023-12-23 at 6 55 51 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/efc6c164-f355-4e52-b0d7-00ff02091e61)
+
+- Click and expand "DC-1".
+  - Forward Lookup Zone: Host Name to IP address mapping
+  - Reverse Lookup Zone: IP Address to Host Name mapping
+- Expand "Forward Lookup Zone" and click on "mydomain.com"
+  - You should now see the list of A-Records that we have right now
+- Remember that an A-Records just means Host Name to IP address mapping
+  - So you can see Client-1 as a Host Name and it maps to 10.0.0.5 while dc-1 is another Host Name that maps to 10.0.0.4 
+
+
+![Screen Shot 2023-12-23 at 7 02 13 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/47eb1b24-0c1c-485d-8d06-862d946d0f1c)
 
 
 
