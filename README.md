@@ -7,7 +7,7 @@
 # Building-Intuition-For-DNS
 
 
-In this Repo, I aim to show you and simplify the concept of DNS (Domain Name System) for an easier grasp of understanding it. We will cover topics such as DNS A-Records, the creation and deletion of records, CNAME Records, and Root Hints.
+In this repository, my goal is to demonstrate and simplify the concept of DNS (Domain Name System) for a more accessible understanding. We'll explore areas like DNS A-Records, creating and deleting records, CNAME Records, and Root Hints.
 
 
 <h2>Environments and Technologies</h2>
