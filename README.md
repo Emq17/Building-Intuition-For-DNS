@@ -119,62 +119,23 @@ A-Records are mappings from Host Names to IP Addresses
   - Sometimes a network's IP address might change but your local computer still has the old IP address cached which can cause you not to reach certain resources  
 - Flush the DNS cache using "ipconfig /flushdns" as a local admin
   - Search up "Command Prompt", right click it, choose "Run as administrator", then run the command
-- After you flush it you will see that the cache is now empty and that the updated IP address should now be in effect if you ping it once again
+  - After you flush it you will see that the cache is now empty and that the updated IP address should now be in effect if you ping it once again
 
 ![Screen Shot 2023-12-23 at 10 19 36 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/ec0362cd-d030-4994-a575-bfb393724f57)
 
+<h2>CNAME Records</h2>
+
+A DNS CNAME record provides an alias for another domain.
+
+
+
+- Go back to DC-1 and create a CNAME record that points the host "search" to "www.google.com"
+- Go back to Client-1 and attempt to ping "search", observe the results of the CNAME record
+- On Client-1, nslookup "search", then observe the results of the CNAME record
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-- Open DC-1
-- Right Click `mainframe`
-- Select `Properties`
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/7abd0b4e-4e22-4792-91cf-52e1c29ed6bc)
-
-- Change `IP Address` to **8.8.8.8**
-- Click `Apply`
-- Click `OK`
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/d3c65d72-403b-4b38-8a62-59d5f1c3c811)
-
-- Return to Client-01
-- In `Command Prompt` **ping mainframe**
-- Notice it continues to ping the old address
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/08fb07a4-13a4-4a43-be14-021f830af9e8)
-
-- Check the local DNS Cache using **ipconfig /displaydns**
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/3e855107-317b-4599-9fac-76c0bab5d039)
-
-- Flush the DNS Cache using **ipconfig /flushdns**
-- Observe the Cache is now empty
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/71e90d84-321b-4d62-9e34-6635746fa2a9)
-
-- Type **ping mainframe**
-- Observe the new IP Address shown
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/7c810328-ecab-4fb5-89f0-3c631e5b0aa6)
-
-<h3>CNAME Record Exercise</h3>
-
->_A DNS CNAME record provides an alias for another domain._
 
 
 - Return to DC-1
