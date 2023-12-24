@@ -125,43 +125,49 @@ A-Records are mappings from Host Names to IP Addresses
 
 <h2>CNAME Records</h2>
 
-A DNS CNAME record provides an alias for another domain.
+Canonical Name; A DNS CNAME record provides an alias for another domain.
+
+- First go to Client-1 and ping "search" and see that nothing was found
+
+![Screen Shot 2023-12-23 at 10 26 40 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/f089fb5b-2f7f-4c7f-8aea-9fa15e03e8d2)
+
+- Go back to DC-1's DNS Manager and create a new CNAME record
+  - Right click, choose "New Alias (CNAME)..."
+ 
+![Screen Shot 2023-12-23 at 10 29 20 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/bd721ac8-cc9d-407b-8b12-28377a95d72b)
+
+- Point the host "search" to associate with "www.google.com"
+  - We are just trying to show that we can map names to other names
+
+![Screen Shot 2023-12-23 at 10 30 06 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/cf055bfd-0c3e-4674-ab8c-abcbd4bef93c)
+![Screen Shot 2023-12-23 at 10 34 22 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/efc160c4-a0be-43c8-8e7e-77d217bb4fac)
+
+- Now go back to Client-1 and ping "search" once again like last time
+  - Notice how it resolves to "www.google.com"
+
+![Screen Shot 2023-12-23 at 10 35 44 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/a85dd2f1-ac8d-4a77-bbf6-a0b5db04b0ec)
+
+- Just for fun, open up your browser and type in your "fully qualified domain name"
+
+![Screen Shot 2023-12-23 at 10 37 28 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/5c62318f-a7b1-4c15-b7b9-d03f1711aa36)
+
+- Notice that it tried to load www.google.com but the certificate did not match so it threw an error code
+  - This is probably going beyond the scope of this demonstration but still it is pretty cool how we forced the name "search" to resolve to "www.google.com" through CNAME Records
+
+![Screen Shot 2023-12-23 at 10 40 06 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/b16e0d4b-e2e6-48d3-8cbd-37e1379954f4)
+
+- By using "ipconfig /displaydns" you can visually see how "search.mydomain.com" resolves to "www.google.com" and then how "www.google.com" resolves to its IP address
+
+![Screen Shot 2023-12-23 at 10 43 55 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/60d507ac-75af-430f-84ef-481fe373aca4)
+
+<h2>Root Hints</h2>
+
+The authoritative name servers that serve the DNS root zone, commonly known as the "root servers", are a network of hundreds of servers in many countries around the world. They are configured in the DNS root zone as 13 named authorities.
+
+![Screen Shot 2023-12-23 at 10 50 40 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/50a37d56-ee14-409a-a932-0276089ce212)
 
 
 
-- Go back to DC-1 and create a CNAME record that points the host "search" to "www.google.com"
-- Go back to Client-1 and attempt to ping "search", observe the results of the CNAME record
-- On Client-1, nslookup "search", then observe the results of the CNAME record
-
-
-
-
-
-
-- Return to DC-1
-- Right click and Select `New Alias (CNAME)...`
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/083b6c9b-6543-421c-ab5a-5d699c19556f)
-
-- Set `Alias name` to **search**
-- Set `Fully qualified domain name` to **www.google.com**
-- Select `OK`
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/647d0220-f27d-4c1a-8139-e3c88d944bdb)
-
-- Return to Client-01
-- Type **ping search**
-- Observe the results of CNAME Records
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/79fa1b1e-6ff2-4d5c-980d-07852d0ec310)
-
-- Type **nslookup mainframe** to query mainframe
-
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/36c10303-75a9-4670-a25b-2693a9d67bfa)
-
-- Type **nslookup search** to query search
-  
-![image](https://github.com/CarlosAlvarado0718/DNS-Intuition/assets/140138198/9673db75-615e-4a2e-9230-8c4805c50857)
 
 <h1>ALL DONE!!! CONGRATS!!!</h1>
 <h3>Now you have a better understanding of DNS, A-Records, DNS caching and CNAME Records. </h3>
