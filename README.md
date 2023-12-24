@@ -90,10 +90,7 @@ A-Records are mappings from Host Names to IP Addresses
 
 ![Screen Shot 2023-12-23 at 7 19 16 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/5fa2d75d-3757-4b03-8e8c-858b7ed490a8)
 
-- You can see here that the ping succeeds this time
-
-![Screen Shot 2023-12-23 at 7 20 40 PM](https://github.com/Emq17/Building-Intuition-For-DNS/assets/147126755/062e2b83-26a2-41a6-ac79-bb1196546b83)
-
+- You can see here that the ping succeeds this time around
 - Type in "nslookup mainframe" on your command line
   - Observe how the dc-1 server with the 10.0.0.4 IP address was able to return the record "mainframe.mydomain.com"
 
